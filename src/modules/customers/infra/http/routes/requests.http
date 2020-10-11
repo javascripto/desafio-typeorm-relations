@@ -1,0 +1,47 @@
+@baseurl = http://localhost:3333
+
+###
+
+POST {{baseurl}}/customers
+Content-Type: application/json
+
+{
+  "name": "Fulano",
+  "email": "fulano@mail.com"
+}
+
+
+###
+
+POST {{baseurl}}/products
+Content-Type: application/json
+
+{
+  "name": "Macbook Pro",
+  "quantity": 3,
+  "price": 12000.00
+}
+
+
+###
+
+POST {{baseurl}}/orders
+Content-Type: application/json
+
+{
+  "customer_id": "4a570071-6323-44f3-a37a-b0f56802d193",
+  "products": [
+    {
+      "id":"5763532b-f3d2-4b12-b28a-3cfd62a7e451",
+      "quantity": 2
+    }
+  ]
+}
+
+
+###
+
+GET {{baseurl}}/orders/f7c088cc-a14d-4515-85ac-ef12a1302008
+
+
+
